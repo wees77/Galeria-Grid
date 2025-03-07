@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul,ol,li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+
+}
+
+header {
+    background-color: orange;
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+    
+}
+
+.galeria {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background-color: tomato;
+    grid-template-areas: 
+        "f1 f2 f2 f3"
+        "f1 f4 f5 f3"
+        "f1 f6 f8 f8"
+        "f1 f7 f8 f8" ;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.foto {
+    background-color: gold;
+    border: 1px solid black;
+}
+
+
+.foto:nth-of-type(1) {
+    grid-area: f1;
+    background-image: url(bandeirinha.webp);
+    background-size: cover;
+    background-position: 60%;
+
+}
+.foto:nth-of-type(2){
+    grid-area: f2;
+    background-image: url(Bellingham.webp);
+    background-size: cover;
+    background-position: center 20%  ;
+
+
+}
+.foto:nth-of-type(3){
+    grid-area: f3;
+    background-image: url(bvb.png);
+    background-size: cover;
+    background-position: center ;
+
+}
+.foto:nth-of-type(4){
+    grid-area: f4;
+    background-image: url(camisa.webp);
+    background-size: cover;
+    background-position: center 30% ;
+
+}
+.foto:nth-of-type(5){
+    grid-area: f5;
+    background-image: url(haaland.jpeg);
+    background-size: cover;
+    background-position: center 10%;
+
+}
+.foto:nth-of-type(6){
+    grid-area: f6;
+    background-image: url(reus.jpeg);
+    background-size: cover;
+    background-position: center 10% ;
+
+}
+.foto:nth-of-type(7){
+    grid-area: f7;
+    background-image: url(time.jpeg);
+    background-size: cover;
+    background-position: center 10%;
+
+}
+.foto:nth-of-type(8){
+    grid-area: f8;
+    background-image: url(torcida.jpeg);
+    background-size: cover;
+    background-position: center ;
+}
+
+footer {
+    background-color: orange;
+    display: grid;
+    place-content: center;
+    font-size: 1rem;
+    font-style: italic;
+}
